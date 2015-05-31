@@ -186,9 +186,24 @@ Take idleDPS(totalDPS()), take MonsterHP. MonsterHP/totalDPS = seconds to kill. 
 // End Gold
 // Start Misc Sim
 
+function monsterHP(level){
 
+	//Monster HP: 10*(1.6^(min(Level,140)-1)+min(Level,140)-1)*(1.15^max(Level-140,0)), rounded up. 
+	//Bosses have a 10*(1-BubosLevel*0.02) HP multiplier, applied before rounding.
+	var finalHP;
+	
+	finalHP = 10 * (Math.pow(1.6,(Math.min(level,140)-1))+(Math.min(level,140)-1)) * (Math.pow(1.15, Math.max(level-140,0)));
 
+	if(level%5 == 0) {
+	
+	finalHP *= 10*(1-(ancients[17].level*0.02));
+	
+	}
+	
+	return Math.ceil(finalHP);
+}
 
+// End M
 
 
 
