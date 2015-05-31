@@ -203,7 +203,47 @@ function monsterHP(level){
 	return Math.ceil(finalHP);
 }
 
-// End M
+// End Misc Sim
+// Start Ancients
+
+function upgradeCost(ancient){
+	
+	//NOTE: Level up before checking cost.
+	
+	var targetLevel = ancient.level;
+
+	if(ancient.name == "Solomon") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Libertas") return targetLevel;
+	if(ancient.name == "Siyalatas") return targetLevel;
+	if(ancient.name == "Khrysos") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Thusia") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Mammon") return targetLevel;
+	if(ancient.name == "Mimzee") return targetLevel;
+	if(ancient.name == "Pluto") return targetLevel;
+	if(ancient.name == "Dogcog") return targetLevel;
+	if(ancient.name == "Fortuna") return targetLevel;
+	if(ancient.name == "Atman") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Dora") return targetLevel;
+	if(ancient.name == "Bhaal") return targetLevel;
+	if(ancient.name == "Morgulis") return 1;
+	if(ancient.name == "Chronos") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Bubos") return targetLevel;
+	if(ancient.name == "Fragsworth") return targetLevel;
+	if(ancient.name == "Vaagur") return (targetLevel/3);
+	if(ancient.name == "Kumawakamaru") return (10*targetLevel);
+	if(ancient.name == "Chawedo") return targetLevel;
+	if(ancient.name == "Hecatoncheir") return targetLevel;
+	if(ancient.name == "Berserker") return targetLevel;
+	if(ancient.name == "Sniperino") return targetLevel;
+	if(ancient.name == "Kleptos") return targetLevel;
+	if(ancient.name == "Energon") return targetLevel;
+	if(ancient.name == "Argaiv") return targetLevel;
+	if(ancient.name == "Juggernaut") return Math.pow(targetLevel,1.5);
+	if(ancient.name == "Iris") return Math.pow(targetLevel,1.5);
+	
+}
+
+// End Ancients
 
 
 
